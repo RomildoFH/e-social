@@ -1,0 +1,41 @@
+.simulation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 10px;
+}
+
+.input-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 8px 0px 8px 0px;
+}
+
+.input-text {
+  width: 50%;
+  height: 25px;
+}
+
+.pergunta-riscos {
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+}
+
+.responsta-label {
+  margin-left: 15px;
+  display: inline-block;
+  height: 16px;
+}
+
+.radio-input {
+  margin: auto 6px;
+}
+
+fieldset {
+  box-sizing: border-box;
+  margin: 10px 0;
+  width: 100%;
+}

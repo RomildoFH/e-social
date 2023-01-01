@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
@@ -10,11 +10,9 @@ function App() {
 
   const { isLoading, setIsLoading } = useContext(AppContext);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);      
-    }, 1000);
-  }, []);
+  setTimeout(() => {
+    setIsLoading(false);      
+  }, 1000);
 
   return (
     <div className="App">

@@ -38,6 +38,11 @@
   padding: 8px 8px;
 }
 
+.items-section button:hover {
+  background-color: rgb(64, 132, 136);;
+  filter: brightness(1.5);
+}
+
 .items-section article {
   margin: 0 10px 16px 10px;
 }
