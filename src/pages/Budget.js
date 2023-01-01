@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Budget.css";
 
 function Budget() {
@@ -19,6 +20,10 @@ function Budget() {
   const [peso, setPeso] = useState(true);
   const [repeticao, setRepeticao] = useState(true);
   const [postura, setPostura] = useState(true);
+  const [consulta, setConsulta] = useState(false);
+  const [contato, setContato] = useState(false);
+
+  const navigate = useNavigate();
 
   // regex para separação de dígitos
   // /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/
@@ -31,6 +36,8 @@ function Budget() {
     const { name, type } = target;
 
     const value = type === "checkbox" ? target.checked : target.value;
+
+    console.log(target.checked)
 
     switch (name) {
       case "nome":
@@ -133,10 +140,39 @@ function Budget() {
           setPostura(false);
         }
         break;
+      case "consulta":
+          setConsulta(value);
+        break;
+      case "contato":
+          setContato(value);
+        break;
       default:
         break;
     }
   };
+
+  const validationForms = () => {
+    const nameValidation = nome.length > 3;
+    const telefoneValidation = telefone.length >= 10;
+    const emailValidation = email.includes('@');
+    const cnpjValidation = cnpj.length  === 18;
+    const funcionariosValidation = Number(funcionarios) > 0;
+    const funcoesValidation = Number(funcoes) > 0;
+    const consultaValidation = consulta === true;
+
+    const result = (nameValidation && telefoneValidation && emailValidation && cnpjValidation && funcionariosValidation && funcoesValidation && consultaValidation)
+
+    return (result);
+  }
+
+  const handleSubmit = () => {
+    const validation = validationForms();
+    if (!validation) {
+      alert("Verifique os dados informados e autorize a consulta");
+    } else {
+      navigate("/e-social/sobre");
+    }
+  }
 
   return (
     <main className="page-container">
@@ -510,7 +546,15 @@ function Budget() {
             </label>
           </label>
         </fieldset>
-        <button type="button">Simular</button>
+        <label htmlFor="autorizacao-01">
+          <input type="checkbox" id="autorizacao-01" name="consulta" checked={ consulta } onChange={ handleChange } />
+          Autorizo que seja feita consulta com base no CNPJ e informações prestadas neste formulário.
+        </label>
+        <label htmlFor="autorizacao-02">
+          <input type="checkbox" id="autorizacao-02" name="contato" checked={ contato } onChange={ handleChange } />
+          Deseja que nossa equipe entre em contato? (opcional)
+        </label>
+        <button type="button" onClick={ handleSubmit }>Simular</button>
       </form>
     </main>
   );
