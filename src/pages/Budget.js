@@ -2,7 +2,7 @@ import React from 'react'
 
 function Budget() {
   return (
-    <div>Budget</div>
+    <div className="page-container">Budget</div>
   )
 }
 
