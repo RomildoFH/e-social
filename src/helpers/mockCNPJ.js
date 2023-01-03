@@ -19,9 +19,13 @@ export const mockJSONCNPJ = {
   "UF": "DF"
 };
 
-export const mockError = {
+export const mockErrorLimit = {
     "TypeError": "Você chegou no seu limite de consultas, envie um email pra gente amplia-lo gratuitamente"
   };
+
+export const mockErrorInvalidCNPJ = {
+    "error": "cnpj: 00000000000100 não encontrado"
+  }
 
 export const mockCNPJ = '00.000.000/0001-91';
 

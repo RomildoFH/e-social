@@ -1,0 +1,17 @@
+.relatory-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.relatory-input {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 4px;
+  height: 20px;
+}
+
+.relatory-input input {
+  margin-right: 8px;
+  height: 16px;
+}

@@ -1,27 +1,52 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import AppContext from "../context/AppContext";
 import "./Budget.css";
 
 function Budget() {
-  const [nome, setNome] = useState('');
-  const [telefone, setTelefone] = useState('');
-  const [email, setEmail] = useState('');
-  const [cnpj, setCnpj] = useState("00.000.000/0001-00");
-  const [funcionarios, setFuncionarios] = useState(1);
-  const [funcoes, setFuncoes] = useState(1);
-  const [ruido, setRuido] = useState(true);
-  const [calor, setCalor] = useState(true);
-  const [vibracao, setVibracao] = useState(true);
-  const [pressao, setPressao] = useState(true);
-  const [radiacao, setRadiacao] = useState(true);
-  const [humidade, setHumidade] = useState(true);
-  const [quimico, setQuimico] = useState(true);
-  const [biologico, setBiologico] = useState(true);
-  const [peso, setPeso] = useState(true);
-  const [repeticao, setRepeticao] = useState(true);
-  const [postura, setPostura] = useState(true);
-  const [consulta, setConsulta] = useState(false);
-  const [contato, setContato] = useState(false);
+
+  const {
+    nome,
+    setNome,
+    telefone,
+    setTelefone,
+    email,
+    setEmail,
+    cnpj,
+    setCnpj,
+    funcionarios,
+    setFuncionarios,
+    funcoes,
+    setFuncoes,
+    ruido,
+    setRuido,
+    calor,
+    setCalor,
+    vibracao,
+    setVibracao,
+    pressao,
+    setPressao,
+    radiacao,
+    setRadiacao,
+    humidade,
+    setHumidade,
+    quimico,
+    setQuimico,
+    biologico,
+    setBiologico,
+    peso,
+    setPeso,
+    repeticao,
+    setRepeticao,
+    postura,
+    setPostura,
+    consulta,
+    setConsulta,
+    contato,
+    setContato,
+    tipo,
+    setTipo,
+  } = useContext(AppContext);
 
   const navigate = useNavigate();
 
@@ -36,8 +61,6 @@ function Budget() {
     const { name, type } = target;
 
     const value = type === "checkbox" ? target.checked : target.value;
-
-    console.log(target.checked)
 
     switch (name) {
       case "nome":
@@ -62,6 +85,10 @@ function Budget() {
             "$1.$2.$3/$4-$5"
           )
         );
+        break;
+      case "tipo":
+        console.log('acessou')
+        setTipo(value);
         break;
       case "ruido":
         if (value === "true") {
@@ -170,7 +197,7 @@ function Budget() {
     if (!validation) {
       alert("Verifique os dados informados e autorize a consulta");
     } else {
-      navigate("/e-social/sobre");
+      navigate("/e-social/simulacao");
     }
   }
 
@@ -227,6 +254,44 @@ function Budget() {
             className="input-text"
           />
         </label>
+        <label htmlFor="tipo" className="input-form">
+          Tipo de empresa
+          <select
+            id="tipo"
+            name="tipo"
+            value={tipo}
+            onChange={handleChange}
+            className="input-select"
+          >
+            <option value="MEI">
+              MEI
+            </option>
+            <option value="EPP">
+              EPP
+            </option>
+            <option value="EI">
+              EI
+            </option>
+            <option value="EIRELI">
+              EIRELI
+            </option>
+            <option value="SLU">
+              SLU
+            </option>
+            <option value="Ltda">
+              Ltda
+            </option>
+            <option value="SS">
+              SS
+            </option>
+            <option value="S/A">
+              S/A
+            </option>
+            <option value="Demais">
+              Demais
+            </option>
+          </select>
+        </label>
         <label htmlFor="funcionarios" className="input-form">
           N° de funcionários
           <input
@@ -276,6 +341,7 @@ function Budget() {
                 name="ruido"
                 value={false}
                 onChange={handleChange}
+                checked={!ruido}
                 className="radio-input"
               />
             </label>
@@ -300,6 +366,7 @@ function Budget() {
                 type="radio"
                 name="calor"
                 value={false}
+                checked={!calor}
                 onChange={handleChange}
                 className="radio-input"
               />
@@ -326,6 +393,7 @@ function Budget() {
                 name="vibracao"
                 value={false}
                 onChange={handleChange}
+                checked={!vibracao}
                 className="radio-input"
               />
             </label>
@@ -351,6 +419,7 @@ function Budget() {
                 name="pressao"
                 value={false}
                 onChange={handleChange}
+                checked={!pressao}
                 className="radio-input"
               />
             </label>
@@ -376,6 +445,7 @@ function Budget() {
                 name="radiacao"
                 value={false}
                 onChange={handleChange}
+                checked={!radiacao}
                 className="radio-input"
               />
             </label>
@@ -401,6 +471,7 @@ function Budget() {
                 name="humidade"
                 value={false}
                 onChange={handleChange}
+                checked={!humidade}
                 className="radio-input"
               />
             </label>
@@ -430,6 +501,7 @@ function Budget() {
                 name="quimico"
                 value={false}
                 onChange={handleChange}
+                checked={!quimico}
                 className="radio-input"
               />
             </label>
@@ -459,6 +531,7 @@ function Budget() {
                 name="biologico"
                 value={false}
                 onChange={handleChange}
+                checked={!biologico}
                 className="radio-input"
               />
             </label>
@@ -488,6 +561,7 @@ function Budget() {
                 name="peso"
                 value={false}
                 onChange={handleChange}
+                checked={!peso}
                 className="radio-input"
               />
             </label>

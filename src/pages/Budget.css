@@ -18,6 +18,11 @@
   height: 25px;
 }
 
+.input-select {
+  width: 50%;
+  height: 25px;
+}
+
 .pergunta-riscos {
   width: 100%;
   display: block;
