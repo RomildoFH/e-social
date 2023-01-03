@@ -54,7 +54,6 @@ function Budget() {
   // /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/
   // regex para insersão dos caracteres especiais
   // "$1.$2.$3/$4-$5"
-  // console.log(cnpj);
   // console.log(cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5"));
 
   const handleChange = ({ target }) => {
@@ -623,15 +622,15 @@ function Budget() {
             </label>
           </label>
         </fieldset>
-        <label htmlFor="autorizacao-01">
+        <label htmlFor="autorizacao-01" className="autorizacao">
           <input type="checkbox" id="autorizacao-01" name="consulta" checked={ consulta } onChange={ handleChange } />
           Autorizo que seja feita consulta com base no CNPJ e informações prestadas neste formulário.
         </label>
-        <label htmlFor="autorizacao-02">
+        <label htmlFor="autorizacao-02" className="autorizacao">
           <input type="checkbox" id="autorizacao-02" name="contato" checked={ contato } onChange={ handleChange } />
           Deseja que nossa equipe entre em contato? (opcional)
         </label>
-        <button type="button" onClick={ handleSubmit }>Simular</button>
+        <button type="button" onClick={ handleSubmit } className="btn-form">Simular</button>
       </form>
     </main>
   );

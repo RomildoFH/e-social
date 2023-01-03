@@ -3,9 +3,9 @@ import AppContext from './AppContext';
 
 function AppProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
-  const [nome, setNome] = useState('');
-  const [telefone, setTelefone] = useState('');
-  const [email, setEmail] = useState('');
+  const [nome, setNome] = useState('Romildo Silva');
+  const [telefone, setTelefone] = useState('87999241374');
+  const [email, setEmail] = useState('romildo.silvafilho1@gmail.com');
   const [cnpj, setCnpj] = useState("00.000.000/0001-00");
   const [funcionarios, setFuncionarios] = useState(1);
   const [funcoes, setFuncoes] = useState(1);

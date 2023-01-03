@@ -1,14 +1,27 @@
 .relatory-container {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .relatory-input {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   margin: 10px 4px;
-  height: 20px;
+  height: fit-content;
+}
+
+.relatory-input input {
+  width: 50%;
+}
+
+.relatory-input textarea {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 10px;
+  resize: none;
 }
 
 .relatory-input input {

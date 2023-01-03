@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Simulacao.css';
-import { endpointGenerate, mockCNPJ, mockErrorLimit, mockErrorInvalidCNPJ, mockJSONCNPJ } from "../helpers/mockCNPJ";
+import { endpointGenerate } from "../helpers/mockCNPJ";
+// impot { endpointGenerate, mockCNPJ, mockErrorLimit, mockErrorInvalidCNPJ, mockJSONCNPJ } from "../helpers/mockCNPJ";
 import AppContext from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { cnaesArray } from '../helpers/cnaes';
@@ -11,6 +12,7 @@ function Simulacao() {
     nome,
     telefone,
     email,
+    cnpj,
     funcionarios,
     funcoes,
     ruido,
@@ -153,9 +155,6 @@ function Simulacao() {
     let valor = 1000 * coefTipo * coefRisco * coefFuncionarios * coefFuncoes;
     let valorMensal = 150 * coefTipo * coefFuncionarios;
 
-    // let valor = 0;
-    // let valorMensal = 0;
-
     if (tipo === 'MEI') {
       valor = 800;
       valorMensal= 100;
@@ -166,11 +165,10 @@ function Simulacao() {
   };
 
   const fetchCNPJ = async () => {
-    // const newString = cnpj.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-    // const response = await fetch(endpointGenerate(newString));
-    // const data = await response.json();
-    const data = mockJSONCNPJ;
-    // console.log(data);
+    const newString = cnpj.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+    const response = await fetch(endpointGenerate(newString));
+    const data = await response.json();
+    // const data = mockJSONCNPJ; //usado para mockar dados
     if (Object.keys(data).includes("TypeError")) {
       alert(`Desculpe, ${ data.TypeError }`);
       navigate('/e-social/orcamento');
@@ -179,7 +177,6 @@ function Simulacao() {
       navigate('/e-social/orcamento');
     }
     setEmpresa(data['RAZAO SOCIAL']);
-    // console.log(cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5"));
     let cnaeString = '';
     for (let i = 0; i <= 4; i +=1) {
       cnaeString += data['CNAE PRINCIPAL CODIGO'][i];
@@ -189,14 +186,9 @@ function Simulacao() {
     const cnaeRisco = cnaesArray.filter((cnae) => (
       cnae.id === cnaeFormated
     ))[0].risco;
-    // const cnaeRisco = 4;
     setRisco(cnaeRisco)
-    const enderecoCompleto = `${data['TIPO LOGRADOURO']} ${data.LOGRADOURO}, ${data.NUMERO}, ${data.BAIRRO}, ${data.MUNICIPIO} - ${data.UF}`
+    const enderecoCompleto = `${data['TIPO LOGRADOURO']} ${data.LOGRADOURO}, ${data.NUMERO}, ${data.BAIRRO}, ${data.MUNICIPIO} - ${data.UF}`;
     setEndereco(enderecoCompleto);
-    // setTimeout(() => {
-    //   setFetching(false);
-    // }, 1000);
-
     setFetching(false);
   } 
 
@@ -221,78 +213,84 @@ function Simulacao() {
             <input type="hidden" name="_next" value="https://romildofh.github.io/e-social/" />
             <label className="relatory-input">
               Solicitante
-              <input type="text" value={ nome } readOnly />
+              <input type="text" value={ nome } name="Nome" className="input-simulation" readOnly />
             </label>
             <label className="relatory-input">
               Telefone
-              <input type="text" value={ telefone } readOnly />
+              <input type="text" value={ telefone } name="Telefone" readOnly />
             </label>
             <label className="relatory-input">
               E-mail
-              <input type="text" value={ email } readOnly />
+              <input type="text" value={ email } name="E-mail" readOnly />
             </label>
             <label className="relatory-input">
               Empresa
-              <input type="text" value={ empresa } readOnly />
+              <input type="text" value={ empresa } name="Empresa" readOnly />
             </label>
             <label className="relatory-input">
               CNAE Principal
-              <input type="text" value={ cnae } readOnly />
+              <input type="text" value={ cnae } name="CNAE Principal" readOnly />
             </label>
             <label className="relatory-input">
               Grau de risco
-              <input type="text" value={ risco } readOnly />
+              <input type="text" value={ risco } name="Grau de risco" readOnly />
             </label>   
             <label className="relatory-input">
               Tipo de empresa
-              <input type="text" value={ tipo } readOnly />
+              <input type="text" value={ tipo } name="Tipo de empresa" readOnly />
             </label>
             <label className="relatory-input">
               Endereço
-              <input type="text" value={ endereco } readOnly />
+              <input type="text" value={ endereco } name="Endereço" readOnly />
             </label>
             <label className="relatory-input">
               Riscos Físicos
-              <input type="text" value={ riscosFisicos } readOnly />
+              <input type="text" value={ riscosFisicos } name="Riscos físicos" readOnly />
             </label>    
             <label className="relatory-input">
               Riscos Químicos
-              <input type="text" value={ riscosQuimicos } readOnly />
+              <input type="text" value={ riscosQuimicos } name="Riscos químicos" readOnly />
             </label> 
             <label className="relatory-input">
               Riscos Biológicos
-              <input type="text" value={ riscosBiologicos } readOnly />
+              <input type="text" value={ riscosBiologicos } name="Riscos biológicos" readOnly />
             </label> 
             <label className="relatory-input">
               Riscos Ergonômicos
-              <input type="text" value={ riscosErgonomicos } readOnly />
+              <input type="text" value={ riscosErgonomicos } name="Riscos ergonômicos" readOnly />
             </label>
             <label className="relatory-input">
               N° de funcionários
-              <input type="text" value={ funcionarios } readOnly />
+              <input type="text" value={ funcionarios } name="N° de funcionários" readOnly />
             </label>
             <label className="relatory-input">
               N° de cargos
-              <input type="text" value={ funcoes } readOnly />
+              <input type="text" value={ funcoes } name="N° de cargos" readOnly />
             </label>
             <label className="relatory-input">
               Programas Necessários
-              <input type="text" value={ documentos } readOnly />
+              <input type="text" value={ documentos } name="Programas necessários" readOnly />
             </label>
             <label className="relatory-input">
               Investimento Inicial
-              <input type="text" value={ `R$ ${preco}` } readOnly />
+              <input type="text" value={ `R$ ${preco}` } name="Investimento inicial" readOnly />
             </label>
             <label className="relatory-input">
               Investimento Mensal
-              <input type="text" value={ `R$ ${mensalidade}` } readOnly />
+              <input type="text" value={ `R$ ${mensalidade}` } name="Mensalidade" readOnly />
             </label>
-            <button type="button" onClick={imprimirOrcamento}>
-              Imprimir
-            </button>
-            <button type="submit">
-              Solicitar contato
-            </button>
+            <label className="relatory-input">
+              Observações
+              <textarea type="text" name="Observações"  />
+            </label>
+            <div id="form-controls">
+              <button type="button" onClick={imprimirOrcamento} className="btn-form">
+                Imprimir
+              </button>
+              <button type="submit" className="btn-form">
+                Solicitar contato
+              </button>
+            </div>
           </form>
         )
       }

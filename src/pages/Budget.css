@@ -19,7 +19,7 @@
 }
 
 .input-select {
-  width: 50%;
+  width: 50.5%;
   height: 25px;
 }
 
@@ -43,4 +43,22 @@ fieldset {
   box-sizing: border-box;
   margin: 10px 0;
   width: 100%;
+}
+
+.autorizacao {
+  font-size: 12px;
+}
+
+.btn-form {
+  max-height: fit-content;
+  text-transform: uppercase;
+  max-width: 220px;
+  font-size: 16px;
+  background-color: rgb(43,132,136);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 8px 15px 15px 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
 }
