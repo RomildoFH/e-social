@@ -266,6 +266,9 @@ function Budget() {
             <option value="MEI">
               MEI
             </option>
+            <option value="ME">
+              ME
+            </option>
             <option value="EPP">
               EPP
             </option>
