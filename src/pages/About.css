@@ -1,17 +1,26 @@
-.equipe-container {
+#lista-servicos {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#equipe-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .colaborador-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 320px;
   max-width: 50%;
-  margin: 0;
 }
 
 .colaborador-thumb {
+  min-width: 150px;
   max-width: 200px;
   border-radius: 50%;
   border: 10px 10px 10px solid black;
@@ -21,4 +30,19 @@
 
 .colaborador-detalhes {
   text-align: center;
+}
+
+.sobre-section {
+  margin: 20px 0;
+}
+
+#container-localidades {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.regiao-titulo {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: -10px;
 }

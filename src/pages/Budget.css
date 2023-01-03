@@ -46,7 +46,7 @@ fieldset {
 }
 
 .autorizacao {
-  font-size: 12px;
+  font-size: 0.9rem;
 }
 
 .btn-form {
@@ -61,4 +61,5 @@ fieldset {
   padding: 8px 20px;
   margin: 8px 15px 15px 0;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
+  cursor: pointer;
 }

@@ -18,7 +18,7 @@
 }
 
 .relatory-input textarea {
-  height: 200px;
+  height: 80px;
   width: 100%;
   margin-bottom: 10px;
   resize: none;
@@ -27,4 +27,30 @@
 .relatory-input input {
   margin-right: 8px;
   height: 16px;
+}
+
+#observação {
+  font-size: 0.8rem;
+}
+
+.print-title {
+  display: none;
+}
+
+@media print {
+  header {
+    display: none;
+  }
+  #contact-footer {
+    display: block;
+  }
+  * {
+    color: black;
+  }
+  .btn-form {
+    display: none;
+  }
+  .print-title {
+    display: block;
+  }
 }

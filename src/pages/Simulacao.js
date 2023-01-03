@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Simulacao.css';
-import { endpointGenerate } from "../helpers/mockCNPJ";
-// impot { endpointGenerate, mockCNPJ, mockErrorLimit, mockErrorInvalidCNPJ, mockJSONCNPJ } from "../helpers/mockCNPJ";
+// import { endpointGenerate } from "../helpers/mockCNPJ";
+import { endpointGenerate, mockCNPJ, mockErrorLimit, mockErrorInvalidCNPJ, mockJSONCNPJ } from "../helpers/mockCNPJ";
 import AppContext from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { cnaesArray } from '../helpers/cnaes';
@@ -166,9 +166,9 @@ function Simulacao() {
 
   const fetchCNPJ = async () => {
     const newString = cnpj.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-    const response = await fetch(endpointGenerate(newString));
-    const data = await response.json();
-    // const data = mockJSONCNPJ; //usado para mockar dados
+    // const response = await fetch(endpointGenerate(newString));
+    // const data = await response.json();
+    const data = mockJSONCNPJ; //usado para mockar dados
     if (Object.keys(data).includes("TypeError")) {
       alert(`Desculpe, ${ data.TypeError }`);
       navigate('/e-social/orcamento');
@@ -210,6 +210,7 @@ function Simulacao() {
       {
         fetching ? <p>Processando dados</p> : (
           <form className="relatory-container" action="https://formsubmit.co/romildo.silvafilho1@gmail.com" method="POST">
+            <h1 className="print-title">Simulação dos programas de SST para eSocial</h1>
             <input type="hidden" name="_next" value="https://romildofh.github.io/e-social/" />
             <label className="relatory-input">
               Solicitante
@@ -226,6 +227,10 @@ function Simulacao() {
             <label className="relatory-input">
               Empresa
               <input type="text" value={ empresa } name="Empresa" readOnly />
+            </label>
+            <label className="relatory-input">
+              CNPJ
+              <input type="text" value={ cnpj } name="CNPJ" readOnly />
             </label>
             <label className="relatory-input">
               CNAE Principal
@@ -281,8 +286,9 @@ function Simulacao() {
             </label>
             <label className="relatory-input">
               Observações
-              <textarea type="text" name="Observações"  />
+              <textarea type="text" name="Observações" placeholder="Gostaria de realizar alguma observação?" />
             </label>
+            <p id="observação">*Este orçamento foi realizado com base nas informações repassadas pela empresa e poderá sofrer ajustes quando realizada vistoria nas instalações do cliente.</p>
             <div id="form-controls">
               <button type="button" onClick={imprimirOrcamento} className="btn-form">
                 Imprimir

@@ -9,3 +9,8 @@ footer {
   color: white;
   font-weight: 500;
 }
+
+#contact-footer {
+  display: none;
+  list-style: none;
+}
