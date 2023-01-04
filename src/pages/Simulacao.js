@@ -152,11 +152,27 @@ function Simulacao() {
       coefFuncionarios = 1 + (funcionarios/100);
     }
 
-    let valor = 1000 * coefTipo * coefRisco * coefFuncionarios * coefFuncoes;
+    // let valor = 1000 * coefTipo * coefRisco * coefFuncionarios * coefFuncoes;
+    let ltcat = 300 * coefTipo * coefRisco * coefFuncionarios * coefFuncoes;
+    let pgr = 300 * coefTipo * coefRisco * coefFuncionarios * coefFuncoes;
+    let pcmso = 400 * coefTipo * coefRisco * coefFuncionarios * coefFuncoes;
     let valorMensal = 150 * coefTipo * coefFuncionarios;
 
+    let programas = {
+      LTCAT: ltcat,
+      PGR: pgr,
+      PCMSO: pcmso,
+    }
+
+    let valor = 0;
+
+    console.log(newArray)
+
+    newArray.forEach(element => {
+      if (element)
+      valor += programas[element];
+    });
     if (tipo === 'MEI') {
-      valor = 800;
       valorMensal= 100;
     }
 

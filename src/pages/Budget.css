@@ -60,6 +60,6 @@ fieldset {
   border-radius: 5px;
   padding: 8px 20px;
   margin: 8px 15px 15px 0;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.486);
   cursor: pointer;
 }

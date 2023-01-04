@@ -2,15 +2,24 @@ footer {
   background-color: rgb(43,132,136);
   bottom: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  max-width: 100%;
   min-height: 50px;
   color: white;
   font-weight: 500;
+  padding: 20px 0 50px 0;
+  flex-wrap: wrap;
+  /* box-sizing: border-box; */
 }
 
-#contact-footer {
-  display: none;
+#autoria {
+  align-self: flex-start;
+}
+
+.contact-footer {
+  /* display: none; */
+  word-wrap: break-word;
   list-style: none;
 }

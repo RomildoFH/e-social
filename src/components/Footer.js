@@ -4,12 +4,14 @@ import './Footer.css';
 function Footer() {
   return (
     <footer>
-      <p>
+      <p id="autoria">
         Todos os direitos reservados © Silva e Vieira, 2023
       </p>
-      <ul id="contact-footer">
+      <ul className="contact-footer">
+        Contatos:
         <li>e-mail: romildo.silvafilho1@gmail.com</li>
-        <li>telefone: (87) 9.9924-1374</li>
+        <li>e-mail: izaquevieira75@gmail.com</li>
+        <li>telefones: (87)9.9924-1374 / (87)9.9927-9676</li>
       </ul>
     </footer>
   )
