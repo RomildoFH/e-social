@@ -20,8 +20,8 @@ function About() {
         <h2 className="secao-titulo">Localidades</h2>
         <div id="container-localidades">
           {
-            regioes.map((regiao) => (
-              <ul>
+            regioes.map((regiao, index) => (
+              <ul key={ index }>
                 <h4 className="regiao-titulo">{ regiao.estado }</h4>
                 {
                   (regiao.cidades.sort()).map((cidade) => (

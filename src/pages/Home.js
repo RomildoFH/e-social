@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { esocial, documentacoes, penalidades, adequacoes } from '../helpers/texts';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Home() {
@@ -89,6 +90,9 @@ function Home() {
               }
             </article>
           </div>
+        </section>
+        <section className="presentation">
+          <p>Acesse nossa aba de simulação e veja quais documentos sua empresa precisa para se adequar ao sistema eSocial <span><Link className="normal-link" to="/e-social/orcamento">Fazer simulação</Link></span>.</p>
         </section>
       </main>
     </div>

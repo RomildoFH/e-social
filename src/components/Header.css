@@ -34,7 +34,7 @@ nav {
   justify-content: space-evenly;
 }
 
-a {
+.nav-button a {
   background-clip:text;
   background-image: linear-gradient(
     to right,
