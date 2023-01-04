@@ -176,6 +176,10 @@ function Simulacao() {
       valorMensal= 100;
     }
 
+    if (valor < 600) {
+      valor = 600;
+    }
+
     setPreco(valor.toFixed(2));
     setMensalidade(valorMensal.toFixed(2));
   };
