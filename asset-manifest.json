@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/e-social/static/css/main.e1c4e92f.css",
-    "main.js": "/e-social/static/js/main.2f64d8d4.js",
+    "main.css": "/e-social/static/css/main.30f71a68.css",
+    "main.js": "/e-social/static/js/main.1dd4e61e.js",
     "static/js/787.5c10bdee.chunk.js": "/e-social/static/js/787.5c10bdee.chunk.js",
-    "static/media/logo.png": "/e-social/static/media/logo.2a57af5bf1089fa0a4ec.png",
+    "static/media/Logo - Silva e Vieira.png": "/e-social/static/media/Logo - Silva e Vieira.c6b06b2ba71478f85444.png",
     "index.html": "/e-social/index.html",
-    "main.e1c4e92f.css.map": "/e-social/static/css/main.e1c4e92f.css.map",
-    "main.2f64d8d4.js.map": "/e-social/static/js/main.2f64d8d4.js.map",
+    "main.30f71a68.css.map": "/e-social/static/css/main.30f71a68.css.map",
+    "main.1dd4e61e.js.map": "/e-social/static/js/main.1dd4e61e.js.map",
     "787.5c10bdee.chunk.js.map": "/e-social/static/js/787.5c10bdee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1c4e92f.css",
-    "static/js/main.2f64d8d4.js"
+    "static/css/main.30f71a68.css",
+    "static/js/main.1dd4e61e.js"
   ]
 }
