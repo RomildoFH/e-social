@@ -15,7 +15,7 @@ function Header() {
           <Link to="/e-social/sobre">Sobre</Link>          
         </button>
         <button className="nav-button">
-          <Link to="/e-social/orcamento">Orçamento</Link>          
+          <Link to="/e-social/orcamento">Simulação</Link>          
         </button>
       </nav>
     </header>

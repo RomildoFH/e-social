@@ -69,7 +69,7 @@ function Home() {
         <section className="penalidades" onClick={ () => handleClick('showPenalidades') }>
           <div className="items-section">
             <button>
-              O que acontece se eu não cumprir com as obrigações do e-Social? 
+              O que acontece se eu não cumprir com as obrigações do eSocial? 
             </button>
             <article>
               {
@@ -81,7 +81,7 @@ function Home() {
         <section className="adequacoes" onClick={ () => handleClick('showAdequacoes') }>
           <div className="items-section">
             <button>
-              O que eu preciso para me adequar ao e-Social? 
+              O que eu preciso para me adequar ao eSocial? 
             </button>
             <article>
               {

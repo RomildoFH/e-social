@@ -12,7 +12,7 @@ export const equipe = [
   {
     name: 'Izaque Vieira',
     cargo: 'Técnico de segurança do trabalho',
-    titulos: ['Técnico de seguranda do trabalho - (IFPE)', 'Eletrotécnico - (IFPE)'],
+    titulos: ['Técnico de segurança do trabalho - (ETE)', 'Técnico em Meio Ambiente - (SENAC)', 'Técnico em Eletroeletrônica  - (IFPE)'],
     email: 'izaquevieira75@gmail.com',
     telefone: '(87)9.9927-9676',
     // thumb: 'https://avatars.githubusercontent.com/u/89591616?v=4',
