@@ -31,12 +31,12 @@ Em seguida o usuário poderá optar por acessar a página de simulação, onde p
 
 ## Links úteis ##
 
-FormSubmit - https://formsubmit.co/
+FormSubmit - https://formsubmit.co/ <br>
 Speedio - https://apiconsultacnpj.com.br/
 
 ## Equipe do projeto ##
 
-Programador e engenheiro de segurança do trabalho - Romildo Silva
+Programador e engenheiro de segurança do trabalho - Romildo Silva <br>
 Técnico de segurança do trabalho - Izaque Vieira
 
 Obrigado!!
