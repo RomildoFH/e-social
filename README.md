@@ -24,7 +24,19 @@ Em seguida o usuário poderá optar por acessar a página de simulação, onde p
   <li>JavaScript - para a criação de estruturas lógicas no código que promovem manipulação de dados e interações</li>
   <li>HTML - para criação de estruturas básicas das páginas e seus componentes</li>
   <li>CSS - estilização de toda a aplicação</li>
-  <li>FormSubmitt - envio dos dados do formulário para pessoa gestora da aplciação</li>
+  <li>FormSubmit - envio dos dados do formulário para pessoa gestora da aplciação</li>
   <li>Speedio - API que retorna os dados de uma empresa</li>
   <li>Figma - Para cliação da logo e paleta de cores</li>
 </ul>
+
+## Links úteis ##
+
+FormSubmit - https://formsubmit.co/
+Speedio - https://apiconsultacnpj.com.br/
+
+## Equipe do projeto ##
+
+Programador e engenheiro de segurança do trabalho - Romildo Silva
+Técnico de segurança do trabalho - Izaque Vieira
+
+Obrigado!!
