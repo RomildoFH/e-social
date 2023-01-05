@@ -26,13 +26,15 @@ Em seguida o usuário poderá optar por acessar a página de simulação, onde p
   <li>CSS - estilização de toda a aplicação</li>
   <li>FormSubmit - envio dos dados do formulário para pessoa gestora da aplciação</li>
   <li>Speedio - API que retorna os dados de uma empresa</li>
-  <li>Figma - Para cliação da logo e paleta de cores</li>
+  <li>Figma - para cliação da logo e paleta de cores</li>
+  <li>Gravatar - para capturar as imagens da equipe</li>
 </ul>
 
 ## Links úteis ##
 
 FormSubmit - https://formsubmit.co/ <br>
 Speedio - https://apiconsultacnpj.com.br/
+Gravatar - https://pt.gravatar.com/
 
 ## Equipe do projeto ##
 
