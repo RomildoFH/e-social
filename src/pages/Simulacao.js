@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Simulacao.css';
-import { endpointGenerate } from "../helpers/mockCNPJ";
-// import { endpointGenerate, mockCNPJ, mockErrorLimit, mockErrorInvalidCNPJ, mockJSONCNPJ } from "../helpers/mockCNPJ";
+// import { endpointGenerate } from "../helpers/mockCNPJ";
+import { endpointGenerate, mockCNPJ, mockErrorLimit, mockErrorInvalidCNPJ, mockJSONCNPJ } from "../helpers/mockCNPJ";
 import AppContext from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { cnaesArray } from '../helpers/cnaes';
@@ -186,9 +186,9 @@ function Simulacao() {
 
   const fetchCNPJ = async () => {
     const newString = cnpj.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-    const response = await fetch(endpointGenerate(newString));
-    const data = await response.json();
-    // const data = mockJSONCNPJ; //usado para mockar dados
+    // const response = await fetch(endpointGenerate(newString));
+    // const data = await response.json();
+    const data = mockJSONCNPJ; //usado para mockar dados
     if (Object.keys(data).includes("TypeError")) {
       alert(`Desculpe, ${ data.TypeError }`);
       navigate('/e-social/orcamento');
@@ -296,14 +296,17 @@ function Simulacao() {
               Programas Necessários
               <input type="text" value={ documentos } name="Programas necessários" readOnly />
             </label>
-            <label className="relatory-input">
-              Investimento Inicial
-              <input type="text" value={ `R$ ${preco}` } name="Investimento inicial" readOnly />
-            </label>
-            <label className="relatory-input">
-              Investimento Mensal
-              <input type="text" value={ `R$ ${mensalidade}` } name="Mensalidade" readOnly />
-            </label>
+            <fieldset>
+              <legend>Orçamento para realização dos programas</legend>
+              <label className="relatory-input">
+                Investimento Inicial
+                <input type="text" value={ `R$ ${preco}` } name="Investimento inicial" readOnly />
+              </label>
+              <label className="relatory-input">
+                Investimento Mensal
+                <input type="text" value={ `R$ ${mensalidade}` } name="Mensalidade" readOnly />
+              </label>
+            </fieldset>
             <label className="relatory-input">
               Observações
               <textarea type="text" name="Observações" placeholder="Gostaria de realizar alguma observação?" />
