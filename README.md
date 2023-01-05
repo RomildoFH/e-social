@@ -12,7 +12,5 @@ Com isto, procurei trazer explicações detalhadas do que é o programa e també
 
 Em primeiro momento, o usuário poderá entender um pouco mais sobre o eSocial, na página home, encontram-se seções que são exibidas através da iterassão com os botões da págna que contém textos sobre o programa.
 
-<br><br>
-
 Em seguida o usuário poderá optar por acessar a página de simulação, onde preencherá um formulário com as informações da empresa e de contatos. Após realizar todo o preenchimento e autorizar a constulta dos dados. Será rediretionado para uma página que conterá os dados cadastrados, programas SST necessários e também o orçamento para prestação do serviço.
 
