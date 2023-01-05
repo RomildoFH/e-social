@@ -32,8 +32,10 @@ Em seguida o usuário poderá optar por acessar a página de simulação, onde p
 
 ## Links úteis ##
 
-FormSubmit - https://formsubmit.co/ <br>
+FormSubmit - https://formsubmit.co/
+<br>
 Speedio - https://apiconsultacnpj.com.br/
+<br>
 Gravatar - https://pt.gravatar.com/
 
 ## Equipe do projeto ##
