@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/e-social/static/css/main.327e5a67.css",
-    "main.js": "/e-social/static/js/main.314f6757.js",
+    "main.js": "/e-social/static/js/main.907a36dd.js",
     "static/js/787.5c10bdee.chunk.js": "/e-social/static/js/787.5c10bdee.chunk.js",
     "static/media/Logo - Silva e Vieira.png": "/e-social/static/media/Logo - Silva e Vieira.c6b06b2ba71478f85444.png",
     "index.html": "/e-social/index.html",
     "main.327e5a67.css.map": "/e-social/static/css/main.327e5a67.css.map",
-    "main.314f6757.js.map": "/e-social/static/js/main.314f6757.js.map",
+    "main.907a36dd.js.map": "/e-social/static/js/main.907a36dd.js.map",
     "787.5c10bdee.chunk.js.map": "/e-social/static/js/787.5c10bdee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.327e5a67.css",
-    "static/js/main.314f6757.js"
+    "static/js/main.907a36dd.js"
   ]
 }
