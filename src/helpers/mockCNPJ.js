@@ -1,22 +1,22 @@
 export const mockJSONCNPJ = {
   "NOME FANTASIA": "DIRECAO GERAL",
-  "RAZAO SOCIAL": "BANCO DO BRASIL SA",
-  "CNPJ": "00000000000191",
+  "RAZAO SOCIAL": "Silva e Vieira Consultoria de Segurança do Trabalho",
+  "CNPJ": "00000000000001",
   "STATUS": "ATIVA",
-  "CNAE PRINCIPAL DESCRICAO": "Bancos múltiplos, com carteira comercial",
-  "CNAE PRINCIPAL CODIGO": "6422100",
-  "CEP": "70040912",
-  "DATA ABERTURA": "01/08/1966",
-  "DDD": "61",
-  "TELEFONE": "34939002",
-  "EMAIL": "secex@bb.com.br",
-  "TIPO LOGRADOURO": "QUADRA",
-  "LOGRADOURO": "SAUN QUADRA 5 LOTE B TORRES I, II E III",
+  "CNAE PRINCIPAL DESCRICAO": "Consultoria em gestão de segurança do trabalho e meio ambiente",
+  "CNAE PRINCIPAL CODIGO": "70204",
+  "CEP": "55290600",
+  "DATA ABERTURA": "01/12/2022",
+  "DDD": "87",
+  "TELEFONE": "999241374",
+  "EMAIL": "romildo.silvafilho1@gmail.com",
+  "TIPO LOGRADOURO": "RUA",
+  "LOGRADOURO": "01",
   "NUMERO": "SN",
-  "COMPLEMENTO": "ANDAR 1 A 16 SALA 101 A 1601 ANDAR 1 A 16 SALA 101 A 1601 ANDAR 1 A 16 SALA 101 A 1601",
-  "BAIRRO": "ASA NORTE",
-  "MUNICIPIO": "Brasilia",
-  "UF": "DF"
+  "COMPLEMENTO": "",
+  "BAIRRO": "CENTRO",
+  "MUNICIPIO": "GARANHUNS",
+  "UF": "PE"
 };
 
 export const mockErrorLimit = {
