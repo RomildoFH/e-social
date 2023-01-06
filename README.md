@@ -1,46 +1,70 @@
-# Silva e Vieira - eSocial #
+# Getting Started with Create React App
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Este projeto tem como objetivo ajudar empresas brasileiras a se adequar ao programa eSocial, obrigatório para todas as empresas que atuam no território brasileiro e possuam 01 (um) ou mais colaboradores.
+## Available Scripts
 
+In the project directory, you can run:
 
-## Qual problema esse projeto resolve? ##
+### `npm start`
 
-Muitas empresas, e inclusive profissionais da área, possuem dificuldade em determinar quais são os documentos que derão base para que se possa ter um correto preenchimento de informações do sistema do gov.br. <br>
-Com isto, procurei trazer explicações detalhadas do que é o programa e também através do preenchimento de um formulário permitir aos usuários identificar quais documetnso de SST necessita para esta etapa.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Como utilizar a ferramenta? ##
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Em primeiro momento, o usuário poderá entender um pouco mais sobre o eSocial, na página home, encontram-se seções que são exibidas através da iterassão com os botões da págna que contém textos sobre o programa.
+### `npm test`
 
-Em seguida o usuário poderá optar por acessar a página de simulação, onde preencherá um formulário com as informações da empresa e de contatos. Após realizar todo o preenchimento e autorizar a constulta dos dados. Será rediretionado para uma página que conterá os dados cadastrados, programas SST necessários e também o orçamento para prestação do serviço. Ao final desta página, o usuário poderá imprimir o relatório e também solicitar contato através do botão. Quando o contato é solicitado, automáticamente é feito o envio de todas as informaçẽos para o e-mail da pessoa gestora da página que retornará contato em momento oportuno.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Tecnologias utilizadas nesse projeto ##
+### `npm run build`
 
-<ul>
-  <li>React - para a criação da aplicação e seus componentes</li>
-  <li>ContextAPI - para a gestão de estados globais</li>
-  <li>JavaScript - para a criação de estruturas lógicas no código que promovem manipulação de dados e interações</li>
-  <li>HTML - para criação de estruturas básicas das páginas e seus componentes</li>
-  <li>CSS - estilização de toda a aplicação</li>
-  <li>FormSubmit - envio dos dados do formulário para pessoa gestora da aplciação</li>
-  <li>Speedio - API que retorna os dados de uma empresa</li>
-  <li>Figma - para cliação da logo e paleta de cores</li>
-  <li>Gravatar - para capturar as imagens da equipe</li>
-</ul>
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Links úteis ##
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-FormSubmit - https://formsubmit.co/
-<br>
-Speedio - https://apiconsultacnpj.com.br/
-<br>
-Gravatar - https://pt.gravatar.com/
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Equipe do projeto ##
+### `npm run eject`
 
-Programador e engenheiro de segurança do trabalho - Romildo Silva <br>
-Técnico de segurança do trabalho - Izaque Vieira
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Obrigado!!
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
