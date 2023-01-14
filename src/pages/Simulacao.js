@@ -166,7 +166,7 @@ function Simulacao() {
 
     let valor = 0;
 
-    console.log(newArray)
+    // console.log(newArray)
 
     newArray.forEach(element => {
       if (element)
@@ -186,30 +186,36 @@ function Simulacao() {
 
   const fetchCNPJ = async () => {
     const newString = cnpj.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-    const response = await fetch(endpointGenerate(newString));
-    const data = await response.json();
-    // const data = mockJSONCNPJ; //usado para mockar dados
-    if (Object.keys(data).includes("TypeError")) {
-      alert(`Desculpe, ${ data.TypeError }`);
+    try {
+      const response = await fetch(endpointGenerate(newString));
+      const data = await response.json();
+      // const data = mockJSONCNPJ; //usado para mockar dados
+      if (Object.keys(data).includes("TypeError")) {
+        alert(`Desculpe, ${ data.TypeError }`);
+        navigate('/e-social/orcamento');
+      } else if (Object.keys(data).includes("error")) {
+        alert(`Desculpe, ${ data.error }`);
+        navigate('/e-social/orcamento');
+      }
+      setEmpresa(data['RAZAO SOCIAL']);
+      let cnaeString = '';
+      for (let i = 0; i <= 4; i +=1) {
+        cnaeString += data['CNAE PRINCIPAL CODIGO'][i];
+      }
+      const cnaeFormated = cnaeString.replace(/^(\d{2})(\d{2})(\d{1})/, "$1.$2-$3");
+      setCnae(`${cnaeFormated} ${data['CNAE PRINCIPAL DESCRICAO']}`);
+      const cnaeRisco = cnaesArray.filter((cnae) => (
+        cnae.id === cnaeFormated
+      ))[0].risco;
+      setRisco(cnaeRisco)
+      const enderecoCompleto = `${data['TIPO LOGRADOURO']} ${data.LOGRADOURO}, ${data.NUMERO}, ${data.BAIRRO}, ${data.MUNICIPIO} - ${data.UF}`;
+      setEndereco(enderecoCompleto);
+      setFetching(false);
+    } catch (error) {
+      console.log(error)
+      alert('Desculpe, estamos com instabilidade em nosso servidor no momento. Por favor, tente novamente mais tarde ou entre em contato conosco');
       navigate('/e-social/orcamento');
-    } else if (Object.keys(data).includes("error")) {
-      alert(`Desculpe, ${ data.error }`);
-      navigate('/e-social/orcamento');
-    }
-    setEmpresa(data['RAZAO SOCIAL']);
-    let cnaeString = '';
-    for (let i = 0; i <= 4; i +=1) {
-      cnaeString += data['CNAE PRINCIPAL CODIGO'][i];
-    }
-    const cnaeFormated = cnaeString.replace(/^(\d{2})(\d{2})(\d{1})/, "$1.$2-$3");
-    setCnae(`${cnaeFormated} ${data['CNAE PRINCIPAL DESCRICAO']}`);
-    const cnaeRisco = cnaesArray.filter((cnae) => (
-      cnae.id === cnaeFormated
-    ))[0].risco;
-    setRisco(cnaeRisco)
-    const enderecoCompleto = `${data['TIPO LOGRADOURO']} ${data.LOGRADOURO}, ${data.NUMERO}, ${data.BAIRRO}, ${data.MUNICIPIO} - ${data.UF}`;
-    setEndereco(enderecoCompleto);
-    setFetching(false);
+    }    
   } 
 
   useEffect(() => {
